@@ -36,7 +36,7 @@ df_bookings = load_data()
 st.sidebar.header("Admin Controls")
 admin_key = st.sidebar.text_input("Enter Admin Password", type="password")
 
-tab1, tab2 = st.tabs(["📝 Make a Booking", "📅 View Schedule"])
+tab1, tab2 = st.tabs(["📝 Make a Booking", "📅 View Schedule (Refresh)"])
 
 with tab1:
     st.info(
@@ -45,8 +45,8 @@ with tab1:
     with st.form("booking_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
         with col1:
-            name = st.text_input("Lecturer Name")
-            dept = st.selectbox("Department", ["Physics", "Biology", "Chemistry", "Maths", "English/G.P/Malay", "History", "Geography",  "Computing", "Pychology/Sociology","Food Science", "Media Studies / ART / D&T", "Business / Accounting / Economics"])
+            name = st.text_input("Lecturer Full Name")
+            dept = st.selectbox("Department", ["Others", "Physics", "Biology", "Chemistry", "Maths", "English/G.P/Malay", "History", "Geography",  "Computing", "Pychology/Sociology","Food Science", "Media Studies / ART / D&T", "Business / Accounting / Economics"])
         with col2:
             booking_date = st.date_input("Date of Booking", min_value=date.today())
             slots = ["08:00 - 09:45", "10:15 - 12:15", "13:15 - 15:15"]
@@ -122,4 +122,5 @@ with tab2:
             df_updated = df_bookings.drop(df_bookings.index[row_idx]).drop(columns=['Date_Obj'])
             conn.update(spreadsheet=SHEET_URL, data=df_updated)
             st.success("Removed!")
+
             st.rerun()
