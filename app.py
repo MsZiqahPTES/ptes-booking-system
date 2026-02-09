@@ -54,7 +54,7 @@ with tab1:
 
         facilities = st.multiselect("Facilities Needed",
                                     ["Smartboard", "Chromebooks", "Visualizer", "Recording Terminal",
-                                     "Internet Access"])
+                                     "Internet Access", "Others"])
         submitted = st.form_submit_button("CONFIRM BOOKING")
 
         if submitted:
@@ -124,3 +124,4 @@ with tab2:
             st.success("Removed!")
 
             st.rerun()
+
