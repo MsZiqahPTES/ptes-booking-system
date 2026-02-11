@@ -11,7 +11,7 @@ ADMIN_PASSWORD = "ptes_admin_123"
 SHEET_URL = "https://docs.google.com/spreadsheets/d/1F54XWB0QE3BXwVyz_RTJtexd9tyWuVpSJ7D8geOqadw/edit?usp=sharing"
 
 st.set_page_config(page_title="PTES Smart Classroom", layout="wide")
-st.title("🏫 PTES Smart Classroom LOG Booking")
+st.title("PTE Sengkurong Smart Classroom LOG Book")
 
 
 # Connect to Google Sheets
@@ -124,4 +124,5 @@ with tab2:
             st.success("Removed!")
 
             st.rerun()
+
 
