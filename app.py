@@ -125,4 +125,13 @@ with tab2:
 
             st.rerun()
 
+with st.sidebar:
+    st.divider()
+    st.subheader("Help & Feedback")
+    st.info("Help us improve! Share your thoughts on the new system.")
+    # Replace the link below with your actual Google Form link
+    st.link_button("Give Feedback ⭐", "https://forms.gle/z6uvsADH1fCpBB3o8")
+
+
+
 
