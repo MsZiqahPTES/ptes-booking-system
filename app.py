@@ -140,7 +140,7 @@ st.markdown(
     """
     <div style="text-align: center; width: 100%;">
         <p style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">
-            ✨ PTES 9618 Resource Portal ✨
+            ✨ PTES Smart Classroom Booking Portal ✨
         </p>
         <p style="font-size: 16px; font-weight: bold; letter-spacing: 0.5px;">
             <span style="color: #FF0000;">🔴 Academically Excellence</span> | 
@@ -157,6 +157,7 @@ st.markdown(
 )
 
 # --- FOOTER & VISITOR COUNTER ---
+
 
 
 
